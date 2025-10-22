@@ -68,7 +68,7 @@ const Day04PixelTransition = () => {
 
       <div className="relative w-full h-screen overflow-hidden">
         <div
-          className={`absolute inset-0 flex items-center justify-center text-6xl font-bold transition-colors duration-700 ${
+          className={`absolute bg-cover bg-no-repeat inset-0 flex items-center justify-center text-6xl font-bold transition-colors duration-700 ${
             showNext
               ? "bg-[url(/Day04-3.jpg)] bg-center text-white"
               : "bg-[url(/Day04-2.jpg)] bg-center text-white"
@@ -101,12 +101,15 @@ const Day04PixelTransition = () => {
               }
             );
           }}
-          className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white text-black px-6 py-3 font-semibold rounded-lg shadow hover:bg-gray-200 transition"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 bg-white text-black px-6 py-3 font-semibold rounded-lg shadow hover:bg-gray-200 transition animate-pulse hover:animate-none hover:cursor-pointer"
         >
           Trigger Pixel Transition
         </button>
       </div>
-      <div className="w-full h-screen bg-indigo-600 flex items-center justify-center bg-[url(/Day04-4.jpg)]   bg-center  ">
+      <div
+        className="w-full h-screen bg-indigo-600 flex items-center justify-center bg-[url(/Day04-4.jpg)] bg-cover bg-no-repeat
+"
+      >
         <h3 className=" text-6xl font-bold animate-bounce text-amber-50 ">
           Scroll Up
         </h3>
